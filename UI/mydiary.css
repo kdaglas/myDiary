@@ -11,6 +11,8 @@ a{
 a:hover{
     color:#ff7b22;
 }
+
+/*    ----    layout css for signup page  ----   */
 .container{
     background: url(Pictures/bg4.jpg);
     background-repeat: no-repeat;
@@ -46,6 +48,7 @@ a:hover{
     color: #1d1d1d;
     font-size: 22px;
 }
+
 /*    ----    css form  ----   */
 .form{
     width: 317px;
