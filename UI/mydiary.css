@@ -81,3 +81,21 @@ a:hover{
 .form .input-box input[type="submit"]:hover {
     background: #ff7b22;
 }
+
+/*    ----   layout css for login page  ----   */
+#container{
+    background: #fff;
+    overflow: hidden;
+}
+.login_box{
+    margin: 0 auto;
+    width:70%;
+    text-align: center;
+}
+.reminder{
+    margin-top: 70px;
+}
+.reminder p{
+    color: #1d1d1d;
+    font-size: 22px;
+}
