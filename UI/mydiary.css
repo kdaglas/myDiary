@@ -98,3 +98,101 @@ a:hover{
     color: #1d1d1d;
     font-size: 22px;
 }
+
+/*    ----   layout css for home page  ----   */
+.head{
+    background-color:white;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    padding:0;
+    height:77px;
+    width: 100%;
+    border-bottom: 1px solid #e26b0b;
+    position: fixed;
+}
+#navigation{
+    width:70%;
+    margin:0 auto;
+}
+#logo{
+    float:left;
+    margin-top: 18px;
+}
+.contact{
+    float:right;
+    font-size:17px;
+}
+/* ---- navigationbar layout ----   */
+ul{
+    height:37px;
+    float:right;
+    margin: 20px 70px;
+}
+ul li{
+    display:inline-table;
+    list-style-type:none;
+    margin:0;
+}
+ul li a{
+    text-decoration:none;
+    font-size: 17px;
+    color:#1d1d1d;
+    display:block;
+    padding:7px;
+    width:80px;
+    text-align:center;
+}
+ul li a:hover{
+    color:#e26b0b;
+}
+
+#contain{
+    background: url(Pictures/whitewall.jpg);
+    background-repeat: no-repeat;
+    background-position: fixed;
+    overflow: hidden;
+}
+.diary_section{
+    width:65%;
+    margin: 80px auto;
+}
+.diary_section .diary_card{
+    display:inline-table;
+}
+.diary_card {
+    background: #ffffff;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 10px;
+    width:225px;
+}
+.diary_card:hover{
+    box-shadow: 0 5px 30px #e06b0b;
+}
+.entry-data {
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+.entry-data a:hover {
+    color: #0c76b1;
+    text-decoration: none;
+}
+.entry-title {
+    color: #444444;
+    margin:20px 0;
+}
+.entry-title a:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+.entry-content {
+    color: #1d1d1d;
+    font-size: 15px;
+}
+/* ---- footer layout ----   */
+footer{
+    float: none;
+    clear: both;
+    text-align: center;
+}
