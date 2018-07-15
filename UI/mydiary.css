@@ -87,12 +87,9 @@ a:hover{
     overflow: hidden;
 }
 .login_box{
-    margin: 0 auto;
+    margin: 70px auto;
     width:70%;
     text-align: center;
-}
-.reminder{
-    margin-top: 70px;
 }
 .reminder p{
     color: #1d1d1d;
@@ -195,4 +192,30 @@ footer{
     float: none;
     clear: both;
     text-align: center;
+}
+
+/* ----    csslayout for add page   ----   */
+.contain{
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    overflow: hidden;
+}
+#reminder {
+    margin-top: 100px;
+}
+.form .input-box textarea {
+    width: 100%;
+    height: 120px;
+    font: 17px calibri;
+    padding: 12px;
+    color: #777;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.form .input-box textarea:focus,
+.form .input-box textarea:valid {
+    border-bottom: 0.5px solid #e26b0b;
 }
