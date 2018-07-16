@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="mydiary.css"/>
+    <link rel="stylesheet" href="nav.css"/>
+    <link rel="stylesheet" href="layout_view.css"/>
     <title>myDiary</title>
 </head>
 <body>
@@ -18,11 +20,8 @@
         </div>
     </header>
     <section class="contain">
-        <div class="login_box">
-            <div id="reminder" class="reminder">
-                <p>What are you feeling right now!.</p>
-            </div>
-            <div class="form">
+        <div class="entry_box">
+            <div id="modify" class="form">
                 <form>
                     <div class="input-box">
                         <input type="text" name="" placeholder="Title" required="">
@@ -35,10 +34,15 @@
                     </div>
                 </form>
             </div>
+            <div class="tasks">
+                <button class="input-box" name="submit" type="submit" value="submit-true">EDIT</button>
+                <button class="input-box" name="submit" type="submit" value="submit-true">DELETE</button>
+                <button class="input-box" name="submit" type="submit" value="submit-true">UPDATE</button>
+            </div>
         </div>
     </section>
     <footer>
-        <p>@2018 © <a href="#">myDiary</a> Design by Douglas Kato.<br />Project by <a href="#">TIA</a>.</p>
+        <p>@2018 (c) <a href="#">myDiary</a> Design by Douglas Kato.<br />Project by <a href="#">TIA</a>.</p>
     </footer>
 </body>
 </html>

@@ -172,7 +172,7 @@ ul li a:hover{
     border-bottom: 1px solid #e3e3e3;
 }
 .entry-data a:hover {
-    color: #0c76b1;
+    color: #1d1d1d;
     text-decoration: none;
 }
 .entry-title {
@@ -180,7 +180,7 @@ ul li a:hover{
     margin:20px 0;
 }
 .entry-title a:hover {
-    color: #428bca;
+    color: #1d1d1d;
     text-decoration: none;
 }
 .entry-content {
@@ -218,4 +218,94 @@ footer{
 .form .input-box textarea:focus,
 .form .input-box textarea:valid {
     border-bottom: 0.5px solid #e26b0b;
+}
+
+/* ---- layout css for the profile page ----   */
+
+#profile-container{
+    background: url(Pictures/whitewall.jpg);
+    overflow: hidden;
+}
+.profile_card {
+    background: transparent;
+    padding: 5px 20px;
+    margin:100px 125px 0;
+    width:657px;
+}
+.profile_card .inner_card {
+    background: #fff;
+    border-radius: 7px;
+    margin:20px 35px;
+    width:580px;
+    height: 330px;
+    box-shadow: 0 5px 30px #1d1d1d;
+}
+.profile_card .inner_card .left{
+    float: left;
+    width: 50%;
+}
+.profile_card .inner_card .right{
+    float: right;
+    padding: 0;
+    text-align: center;
+    width: 50%;
+    height: 330px;
+    background-color: #e06b0b;
+}
+.profile_name{
+    font-size: 50px;
+    color: #fff;
+}
+.mail{
+    margin-top: -30px;
+}
+.entries{
+    font:20px bold calibri;
+    color: #fff;
+}
+button{
+    border-radius:7px;
+    width: 70%;
+    font: 17px calibri;
+    padding: 12px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #181818;
+    box-shadow: 0 5px 30px #1d1d1d;
+    box-sizing: border-box;
+}
+button:hover{
+    background: #1d1d1d;
+}
+
+/* ---- layout css for the entry page ----   */
+.entry_box{
+    margin: 70px auto;
+    width:50%;
+    text-align: center;
+}
+#modify{
+    float: left;
+    width: 65%;
+}
+.tasks{
+    float: right;
+    width: 30%;
+    margin: 47px auto;
+    text-align: center;
+}
+.tasks button{
+    display: block;
+    margin: 20px auto;
+    border: none;
+    background: #e26b0b;
+    color: #fff;
+    font-weight: bold;
+    width: 50%;
+    font: 17px calibri;
+    padding: 12px;
+}
+.tasks button:hover{
+    background: #ff7b22;
 }
