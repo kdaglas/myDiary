@@ -1,0 +1,311 @@
+html, body{
+    margin:0;
+    padding:0;
+    font-family: calibri;
+}
+a{
+    text-decoration:none;
+    color:#e26b0b;
+}
+a:hover{
+    color:#ff7b22;
+}
+
+/*    ----    layout css for signup page  ----   */
+.container{
+    background: url(Pictures/bg4.jpg);
+    background-repeat: no-repeat;
+    background-position: fixed;
+    overflow: hidden;
+}
+.leftcont{
+    float: left;
+    width:50%;
+    text-align: center;
+    margin-top: 150px;
+}
+.leftcont p{
+    font-size: 28px;
+    color:#fff;
+}
+.leftcont p small{
+    color:#fff;
+    font-size: 17px;
+}
+.rightcont{
+    float:right;
+    width:50%;
+    height:100vh;
+    background:#fff;
+    box-shadow: 0 7px 50px rgba(0,0,0,.3);
+}
+.signup_box{
+    margin: 57px auto;
+    width:80%;
+    text-align: center;
+}
+.introduction p{
+    color: #1d1d1d;
+    font-size: 22px;
+}
+
+/*    ----    css form  ----   */
+.form{
+    width: 317px;
+    margin: 47px auto;
+}
+.form .input-box {
+    margin: 20px 0;
+}
+.form .input-box input {
+    width: 100%;
+    font-size: 17px;
+    padding: 12px;
+    color: #777;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+}
+.form .input-box input:focus,
+.form .input-box input:valid {
+    border-bottom: 0.5px solid #e26b0b;
+}
+.form .input-box input[type="submit"] {
+    border: none;
+    background: #e26b0b;
+    color: #fff;
+    font-weight: bold;
+}
+.form .input-box input[type="submit"]:hover {
+    background: #ff7b22;
+}
+
+/*    ----   layout css for login page  ----   */
+#container{
+    background: #fff;
+    overflow: hidden;
+}
+.login_box{
+    margin: 80px auto;
+    width:65%;
+    text-align: center;
+}
+.reminder p{
+    color: #1d1d1d;
+    font-size: 22px;
+}
+
+/*    ----   layout css for home page  ----   */
+.head{
+    background-color:white;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    padding:0;
+    height:77px;
+    width: 100%;
+    border-bottom: 1px solid #e26b0b;
+    position: fixed;
+}
+#navigation{
+    width:70%;
+    margin:0 auto;
+}
+#logo{
+    float:left;
+    margin-top: 18px;
+}
+.contact{
+    float:right;
+    font-size:17px;
+}
+/* ---- navigationbar layout ----   */
+ul{
+    height:37px;
+    float:right;
+    margin: 20px 70px;
+}
+ul li{
+    display:inline-table;
+    list-style-type:none;
+    margin:0;
+}
+ul li a{
+    text-decoration:none;
+    font-size: 17px;
+    color:#1d1d1d;
+    display:block;
+    padding:7px;
+    width:80px;
+    text-align:center;
+}
+ul li a:hover{
+    color:#e26b0b;
+}
+
+#contain{
+    background: url(Pictures/whitewall.jpg);
+    background-repeat: no-repeat;
+    background-position: fixed;
+    overflow: hidden;
+}
+.diary_section{
+    width:65%;
+    margin: 80px auto;
+}
+.diary_section .diary_card{
+    display:inline-table;
+}
+.diary_card {
+    background: #ffffff;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 10px;
+    width:225px;
+}
+.diary_card:hover{
+    box-shadow: 0 5px 30px #e06b0b;
+}
+.entry-data {
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+.entry-data a:hover {
+    color: #1d1d1d;
+    text-decoration: none;
+}
+.entry-title {
+    color: #444444;
+    margin:20px 0;
+}
+.entry-title a:hover {
+    color: #1d1d1d;
+    text-decoration: none;
+}
+.entry-content {
+    color: #1d1d1d;
+    font-size: 15px;
+}
+/* ---- footer layout ----   */
+footer{
+    float: none;
+    clear: both;
+    text-align: center;
+}
+
+/* ----    csslayout for add page   ----   */
+.contain{
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    overflow: hidden;
+}
+#reminder {
+    margin-top: 120px;
+}
+.form .input-box textarea {
+    width: 100%;
+    height: 120px;
+    font: 17px calibri;
+    padding: 12px;
+    color: #777;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.form .input-box textarea:focus,
+.form .input-box textarea:valid {
+    border-bottom: 0.5px solid #e26b0b;
+}
+
+/* ---- layout css for the profile page ----   */
+
+#profile-container{
+    background: url(Pictures/whitewall.jpg);
+    overflow: hidden;
+}
+.profile_card {
+    background: transparent;
+    padding: 5px 20px;
+    margin:100px 125px 0;
+    width:657px;
+}
+.profile_card .inner_card {
+    background: #fff;
+    border-radius: 7px;
+    margin:20px 35px;
+    width:580px;
+    height: 330px;
+    box-shadow: 0 5px 30px #1d1d1d;
+}
+.profile_card .inner_card .left{
+    float: left;
+    width: 50%;
+}
+.profile_card .inner_card .right{
+    float: right;
+    padding: 0;
+    text-align: center;
+    width: 50%;
+    height: 330px;
+    background-color: #e06b0b;
+}
+.profile_name{
+    font-size: 50px;
+    color: #fff;
+}
+.mail{
+    margin-top: -30px;
+}
+.entries{
+    font:20px bold calibri;
+    color: #fff;
+}
+button{
+    border-radius:7px;
+    width: 70%;
+    font: 17px calibri;
+    padding: 12px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #181818;
+    box-shadow: 0 5px 30px #1d1d1d;
+    box-sizing: border-box;
+}
+button:hover{
+    background: #1d1d1d;
+}
+
+/* ---- layout css for the entry page ----   */
+.entry_box{
+    margin: 70px auto;
+    width:50%;
+    text-align: center;
+}
+#modify{
+    float: left;
+    width: 65%;
+}
+.tasks{
+    float: right;
+    width: 30%;
+    margin: 47px auto;
+    text-align: center;
+}
+.tasks button{
+    display: block;
+    margin: 20px auto;
+    border: none;
+    background: #e26b0b;
+    color: #fff;
+    font-weight: bold;
+    width: 50%;
+    font: 17px calibri;
+    padding: 12px;
+}
+.tasks button:hover{
+    background: #ff7b22;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="mydiary.css"/>
+    <link rel="stylesheet" href="nav.css"/>
+    <link rel="stylesheet" href="layout_view.css"/>
+    <title>myDiary</title>
+</head>
+<body>
+    <header class="head">
+        <div id="navigation">
+            <a href="home_page.html"><img id="logo" src="Pictures/blacklogo1.png" /></a>
+            <p class="contact">Hello, Douglas<br /><a href="login_page.html">Log out</a></p>
+            <ul>
+                <li><a href="home_page.html">HOME</a></li><li>
+                <a href="add_entry.html">ADD</a></li><li>
+                <a href="my_profile.html">PROFILE</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="contain">
+        <div class="entry_box">
+            <div id="modify" class="form">
+                <form>
+                    <div class="input-box">
+                        <input type="text" name="" placeholder="Title" required="">
+                    </div>
+                    <div class="input-box">
+                        <textarea type="text" name="" placeholder="What are you feeling..." required=""></textarea>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" name="" value="Post">
+                    </div>
+                </form>
+            </div>
+            <div class="tasks">
+                <button class="input-box" name="submit" type="submit" value="submit-true">EDIT</button>
+                <button class="input-box" name="submit" type="submit" value="submit-true">DELETE</button>
+                <button class="input-box" name="submit" type="submit" value="submit-true">UPDATE</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>@2018 (c) <a href="#">myDiary</a> Design by Douglas Kato.<br />Project by <a href="#">TIA</a>.</p>
+    </footer>
+</body>
+</html>
