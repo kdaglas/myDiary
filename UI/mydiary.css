@@ -87,8 +87,8 @@ a:hover{
     overflow: hidden;
 }
 .login_box{
-    margin: 70px auto;
-    width:70%;
+    margin: 80px auto;
+    width:65%;
     text-align: center;
 }
 .reminder p{
@@ -202,7 +202,7 @@ footer{
     overflow: hidden;
 }
 #reminder {
-    margin-top: 100px;
+    margin-top: 120px;
 }
 .form .input-box textarea {
     width: 100%;
