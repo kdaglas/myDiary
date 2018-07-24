@@ -16,14 +16,3 @@ class DiaryEntry(object):
         self.title = title
         self.content = content
         self.today = today
-
-
-    def entry_to_Json(self):
-        """Function to give the DiaryEntry model ability to be jsonified """
-        entry = dict(
-            id = self.id,
-            title = self.title,
-            content = self.content,
-            today = self.today
-            )
-        return entry
