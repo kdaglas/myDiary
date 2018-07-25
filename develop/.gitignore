@@ -3,10 +3,4 @@ venv/
 *.pyc
 app/*.pyc
 test/*.pyc/
-
-
-
-
-
-
-
+.vscode/
