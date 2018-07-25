@@ -1,0 +1,12 @@
+__pycache__/
+venv/
+*.pyc
+app/*.pyc
+test/*.pyc/
+
+
+
+
+
+
+
