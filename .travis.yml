@@ -9,6 +9,6 @@ install:
   
 # command to run tests 
 script: 
-  - nose2 -v --with-coverage --coverage app
+  - nosetests -v --with-coverage --coverage app
 
 after_success: - coveralls
