@@ -64,17 +64,18 @@ def add_entry():
 @app.route("/api/v1/diaries/all_entries", methods=['GET'])
 def get_all_entries():
     if len(all_entries) > 0:
-        return jsonify({'message': 'All entries successfully viewed', 
-        'All entries here':[
-            entry.__dict__ for entry in all_entries
-        ]}), 200
+        print(all_entries)
+        return jsonify({'message': 'All entries successfully viewed',
+                        'All entries here': [
+                            entry.__dict__ for entry in all_entries
+                        ]}), 200
 
     return jsonify({'message': 'No entry added'}), 404
 
 
 @app.route("/api/v1/diaries/<entry_id>", methods=["GET"])
 def get_single_entry(entry_id):
-    if entry_id > 0:
+    if int(entry_id) > 0:
         if len(all_entries) > 0:
             for entry in all_entries:
                 if entry.id == int(entry_id):
@@ -92,15 +93,10 @@ def edit_entry(entry_id):
     data = request.get_json()
     new_entry = data.get('new_entry')
 
-    
-
-    if entry_id > 0:
+    if int(entry_id) > 0:
         if len(all_entries) > 0:
-            update = next(item for item in all_entries if item['id'] == id)
+            update = next(item for item in all_entries if item.get('id') == id)
             update['content'] = new_entry
-            #for entry in all_entries:
-    #             entry.update((k, "value3") for k, v in entry.iteritems() if v == "value2")
-            
-            
+
         return jsonify({"message": "No entry has been registered yet"}), 404
     return jsonify({"message": "Single entry id has to be bigger than zero"}), 404
