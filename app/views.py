@@ -89,10 +89,13 @@ def get_single_entry(entry_id):
 
 @app.route("/api/v1/diaries/<entry_id>", methods=["PUT"])
 def edit_entry(entry_id):
+    data = request.get_json()
+    new_entry = data.get('new_entry')
+
     if entry_id > 0:
         if len(all_entries) > 0:
-            for entry in all_entries:
-                entry.update((k, "value3") for k, v in entry.iteritems() if v == "value2")
+            # for entry in all_entries:
+            #     entry.update((k, "value3") for k, v in entry.iteritems() if v == "value2")
             
             return jsonify({"message": "Entry doesnot exist"})
         return jsonify({"message": "No entry has been registered yet"}), 404
