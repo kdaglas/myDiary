@@ -92,11 +92,15 @@ def edit_entry(entry_id):
     data = request.get_json()
     new_entry = data.get('new_entry')
 
+    
+
     if entry_id > 0:
         if len(all_entries) > 0:
-            # for entry in all_entries:
-            #     entry.update((k, "value3") for k, v in entry.iteritems() if v == "value2")
+            update = next(item for item in all_entries if item['id'] == id)
+            update['content'] = new_entry
+            #for entry in all_entries:
+    #             entry.update((k, "value3") for k, v in entry.iteritems() if v == "value2")
             
-            return jsonify({"message": "Entry doesnot exist"})
+            
         return jsonify({"message": "No entry has been registered yet"}), 404
-    return jsonify({"message": "Single entry id has to bigger than zero"}), 404
+    return jsonify({"message": "Single entry id has to be bigger than zero"}), 404
