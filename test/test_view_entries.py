@@ -17,7 +17,7 @@ class Test_View_Entries(unittest.TestCase):
                   
         reply = json.loads(response.data.decode())
         response2 = self.app.get("/api/v1/diaries/all_entries",
-        content_type='application/json', data=reply)
+                                content_type='application/json', data=reply)
         reply2 = json.loads(response2.data.decode())
         self.assertEquals(reply2["message"],"All entries successfully viewed")
 
@@ -35,8 +35,7 @@ class Test_View_Entries(unittest.TestCase):
             
         reply = json.loads(response.data.decode())
         response2 = self.app.get("/api/v1/diaries/1",
-        content_type='application/json',
-            data=reply)
+                                content_type='application/json', data=reply)
         reply2 = json.loads(response2.data.decode())
         self.assertEquals(reply2["message"],"Single entry successfully viewed")
 
