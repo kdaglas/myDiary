@@ -40,7 +40,7 @@ def login():
     if len(password) < 1:
         return jsonify({'message': 'Password is wrong'}), 400
 
-    return jsonify({'message': 'Successfully logged in'}) 
+    return jsonify({'message': 'Successfully logged in'})
 
 
 @app.route("/api/v1/diaries/add_entry", methods=['POST'])
@@ -53,11 +53,27 @@ def add_entry():
 
     if len(title) < 1:
         return jsonify({'message': 'Title is missing'}), 400
-    if len(content) < 1:
+    elif len(content) < 1:
         return jsonify({'message': 'Missing entry'}), 400
 
+    # new_entry = DiaryEntry(id, title, content, today)
+    # all_entries.append(new_entry)
+
+    # for item in all_entries:
+    #     if item['content'] == content:
+    #         return jsonify({'message':'Same content made'})
+    #     else:
+    #         new_entry = DiaryEntry(id, title, content, today)
+    #         all_entries.append(new_entry)
+    for entry in all_entries:
+        if entry.content == content:
+            return jsonify({'message':'Same content made'})
+        
     new_entry = DiaryEntry(id, title, content, today)
-    all_entries.append(new_entry)
+    all_entries.append(new_entry)   
+        
+
+    
     return jsonify({'message': 'Entry successfully added'}), 200
 
 
@@ -91,12 +107,28 @@ def get_single_entry(entry_id):
 @app.route("/api/v1/diaries/<entry_id>", methods=["PUT"])
 def edit_entry(entry_id):
     data = request.get_json()
-    new_entry = data.get('new_entry')
+    new_entry = {}
+    new_entry['title'] = data.get('title')
+    new_entry['content'] = data.get('content')
 
-    if int(entry_id) > 0:
-        if len(all_entries) > 0:
-            update = next(item for item in all_entries if item.get('id') == id)
-            update['content'] = new_entry
 
-        return jsonify({"message": "No entry has been registered yet"}), 404
+    for entry in all_entries:
+        if entry.id == int(entry_id):
+            entry.content = new_entry['content']
+            entry.title = new_entry['title']
+       
+            return jsonify({"message": "Entry has been modified"}), 200
+    # new_entry = DiaryEntry(id, title, content, today)
+    # all_entries.append(new_entry)
+
+    # if int(entry_id) > 0:
+    #     if len(all_entries) > 0:
+    #         update = [item for item in all_entries if item['id'] == id]
+    #         update[0]['content'] = content
+            # update = next(item for item in all_entries if item['id'] == id)
+            # update['content'] = new_entry
+            # for entry in all_entries:
+    #             entry.update((k, "value3") for k, v in entry.iteritems() if v == "value2")
+
+        return jsonify({"message": "No such entry"}), 404
     return jsonify({"message": "Single entry id has to be bigger than zero"}), 404
