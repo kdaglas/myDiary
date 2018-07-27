@@ -12,7 +12,6 @@ Flask==1.0.2
 Flask-API==1.0
 Flask-Testing==0.7.1
 funcsigs==1.0.2
-futures==3.2.0
 gunicorn==19.9.0
 idna==2.6
 ipaddress==1.0.17
