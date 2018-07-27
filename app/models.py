@@ -27,5 +27,5 @@ class DiaryEntry(types.ModuleType):
         self.today = today
 
     def __getitem__(self, key):
-        # return self.data["key"]
+        # return DiaryEntry.data["key"]
         pass
