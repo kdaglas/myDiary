@@ -20,7 +20,11 @@
 #                                 data=json.dumps(dict(id="1", title="Andela", content="The way to me, code", today="17.07.2018"),)
 #                                 )
 
-#         reply = json.loads(response.data.decode())
-#         response = self.app.get("/api/v1/diaries/1",
-#                                 content_type='application/json', data=reply)
-#         self.assertEquals(reply2["message"],"Entry has been modified")
+#         # reply = json.loads(response.data.decode())
+#         # response = self.app.get("/api/v1/diaries/1",
+#         #                         content_type='application/json', data=reply)
+#         # self.assertEquals(reply2["message"],"Entry has been modified")
+
+
+#         data = json.loads(response.data.decode())
+#         self.assertEquals(data["message"], "Entry has been modified")
