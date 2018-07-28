@@ -1,4 +1,4 @@
-### myDiary
+# myDiary
 
 [![Build Status](https://travis-ci.org/kdaglas/myDiary.svg?branch=myDiary-api)](https://travis-ci.org/kdaglas/myDiary)
 [![Coverage Status](https://coveralls.io/repos/github/kdaglas/myDiary/badge.svg)](https://coveralls.io/github/kdaglas/myDiary)
@@ -14,7 +14,7 @@ This is the link to the demo
 
 This api allows the diary users to add an entry, modify an entry, view a single entry and view all entries.
 
-# Feautures
+### Feautures
 
 - Register a user
 - Login a user
@@ -23,12 +23,12 @@ This api allows the diary users to add an entry, modify an entry, view a single 
 - Add an entry
 - Modify an entry
 
-# Requirements
+### Requirements
 
 Python 2.7.x and above
 Note: Python needs to be installed globally (not in the virtual environment)
 
-# How to use:
+### How to use:
 
 Begin by cloning the repository:
 ```
@@ -43,10 +43,10 @@ Go into the folder, create a virtual environment, activate it and then use a pip
     $ python run.py
 ```
 
-# Final result:
+### Final result:
 API is being hosted by heroku at:
 https://douglas-mydiary.herokuapp.com/api/v1/diaries
 
-# Built with and by:
+### Built with and by:
 
 [Flask](https://flask.pocoo.org/) - Python webframework
