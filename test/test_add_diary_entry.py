@@ -10,7 +10,7 @@ class Test_Diary_Entries(unittest.TestCase):
 
     def test_add_entry(self):
         """ a test for successful adding an entry """
-        response = self.app.post("/api/v1/diaries/add_entry", content_type='application/json',
+        response = self.app.post("/api/v1/diaries", content_type='application/json',
                                 data=json.dumps(dict(id="1", title="Coding", content="The best way of life is code", today="17.07.2018"),)
                                 )      
         reply = json.loads(response.data)
@@ -20,7 +20,7 @@ class Test_Diary_Entries(unittest.TestCase):
     
     def test_registration_with_empty_title(self):
         """ Test for empty title validation """
-        response = self.app.post("/api/v1/diaries/add_entry", content_type='application/json',
+        response = self.app.post("/api/v1/diaries", content_type='application/json',
                                 data=json.dumps(dict(id="1", title="", content="The best way of life is code", today="17.07.2018"),)
                                 )              
         reply = json.loads(response.data)
@@ -30,7 +30,7 @@ class Test_Diary_Entries(unittest.TestCase):
 
     def test_registration_with_empty_content(self):
         """ Test for empty content validation """
-        response = self.app.post("/api/v1/diaries/add_entry", content_type='application/json',
+        response = self.app.post("/api/v1/diaries", content_type='application/json',
                                 data=json.dumps(dict(id="1", title="Coding", content="", today="17.07.2018"),)
                                 )              
         reply = json.loads(response.data)

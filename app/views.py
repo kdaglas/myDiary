@@ -43,7 +43,7 @@ def login():
     return jsonify({'message': 'Successfully logged in'})
 
 
-@app.route("/api/v1/diaries/add_entry", methods=['POST'])
+@app.route("/api/v1/diaries", methods=['POST'])
 def add_entry():
     data = request.get_json()
     id = len(all_entries) + 1
@@ -56,28 +56,17 @@ def add_entry():
     elif len(content) < 1:
         return jsonify({'message': 'Missing entry'}), 400
 
-    # new_entry = DiaryEntry(id, title, content, today)
-    # all_entries.append(new_entry)
-
-    # for item in all_entries:
-    #     if item['content'] == content:
-    #         return jsonify({'message':'Same content made'})
-    #     else:
-    #         new_entry = DiaryEntry(id, title, content, today)
-    #         all_entries.append(new_entry)
     for entry in all_entries:
         if entry.content == content:
             return jsonify({'message':'Same content made'})
         
     new_entry = DiaryEntry(id, title, content, today)
     all_entries.append(new_entry)   
-        
-
     
     return jsonify({'message': 'Entry successfully added'}), 200
 
 
-@app.route("/api/v1/diaries/all_entries", methods=['GET'])
+@app.route("/api/v1/diaries", methods=['GET'])
 def get_all_entries():
     if len(all_entries) > 0:
         print(all_entries)
