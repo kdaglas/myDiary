@@ -27,11 +27,7 @@ class Test_View_Entries(unittest.TestCase):
         response = self.app.post("/api/v1/diaries",
                                 content_type='application/json',
                                 data=json.dumps(dict(id="1", title="Coding", content="The best way of life is code", today="17.07.2018"),)
-                                ) 
-        # response = self.app.get("/api/v1/diaries/add_entry",
-        #                         content_type='application/json',
-        #                         data=json.dumps(dict(id="2", title="Playing", content="The best way of life is playing", today="18.07.2018"),)
-        #                         )     
+                                )     
             
         reply = json.loads(response.data.decode())
         response2 = self.app.get("/api/v1/diaries/1",

@@ -47,9 +47,9 @@ def login():
 def add_entry():
     data = request.get_json()
     id = len(all_entries) + 1
+    today = str(date.today())
     title = data.get('title')
     content = data.get('content')
-    today = str(date.today())
 
     if len(title) < 1:
         return jsonify({'message': 'Title is missing'}), 400
@@ -57,10 +57,14 @@ def add_entry():
         return jsonify({'message': 'Missing entry'}), 400
 
     for entry in all_entries:
+        if entry.title == title:
+            return jsonify({'message':'Same title made'})
+    
+    for entry in all_entries:
         if entry.content == content:
             return jsonify({'message':'Same content made'})
         
-    new_entry = DiaryEntry(id, title, content, today)
+    new_entry = DiaryEntry(id, today, title, content)
     all_entries.append(new_entry)   
     
     return jsonify({'message': 'Entry successfully added'}), 200
@@ -88,6 +92,7 @@ def get_single_entry(entry_id):
                         "message": "Single entry successfully viewed",
                         "Diary Entry": entry.__dict__
                     }), 200
+
             return jsonify({"message": "Entry doesnot exist"})
         return jsonify({"message": "No entry has been registered yet"}), 404
     return jsonify({"message": "Single entry id has to bigger than zero"}), 404
@@ -100,24 +105,10 @@ def edit_entry(entry_id):
     new_entry['title'] = data.get('title')
     new_entry['content'] = data.get('content')
 
-
     for entry in all_entries:
         if entry.id == int(entry_id):
-            entry.content = new_entry['content']
             entry.title = new_entry['title']
-       
+            entry.content = new_entry['content']
             return jsonify({"message": "Entry has been modified"}), 200
-    # new_entry = DiaryEntry(id, title, content, today)
-    # all_entries.append(new_entry)
-
-    # if int(entry_id) > 0:
-    #     if len(all_entries) > 0:
-    #         update = [item for item in all_entries if item['id'] == id]
-    #         update[0]['content'] = content
-            # update = next(item for item in all_entries if item['id'] == id)
-            # update['content'] = new_entry
-            # for entry in all_entries:
-    #             entry.update((k, "value3") for k, v in entry.iteritems() if v == "value2")
-
         return jsonify({"message": "No such entry"}), 404
     return jsonify({"message": "Single entry id has to be bigger than zero"}), 404

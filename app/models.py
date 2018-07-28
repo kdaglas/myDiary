@@ -1,7 +1,3 @@
-import sys
-import types
-
-
 """  Object classes for the User """
 
 
@@ -16,16 +12,13 @@ class User(object):
         self.password = password
 
 
-class DiaryEntry(types.ModuleType):
+class DiaryEntry():
 
     """ constructor to initialise all params """
 
-    def __init__(self, id, title, content, today):
+    def __init__(self, id, today, title, content):
         self.id = id
+        self.today = today
         self.title = title
         self.content = content
-        self.today = today
-
-    def __getitem__(self, key):
-        # return DiaryEntry.data["key"]
-        pass
+        
